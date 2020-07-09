@@ -1,7 +1,7 @@
 {
   "name": "smart_brain_api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Server for Face Recognition Web App",
   "main": "index.js",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -19,9 +19,18 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Wolf Laleau",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nomadic337/Face-Recognition-App-Api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nomadic337/Face-Recognition-App-Api/issues"
+  },
+  "homepage": "https://github.com/Nomadic337/Face-Recognition-App-Api#readme"
 }
