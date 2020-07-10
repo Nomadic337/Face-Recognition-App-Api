@@ -7,7 +7,7 @@ const app = new Clarifai.App({
    });
 
 const handleApiCall = (req, res) => { // no req.body.input generated?
-    const { test } = req.body.input;
+    const { test } = req;
     if (test) {
         res.json("value received!!");
     } else {
