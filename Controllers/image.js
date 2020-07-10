@@ -7,7 +7,6 @@ const app = new Clarifai.App({
    });
 
 const handleApiCall = (req, res) => { 
-    res.json(req)
     // app.models
     //     .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
     //     .then(data => {
@@ -25,12 +24,6 @@ const handleApiCall = (req, res) => {
    
 
 const handleImage = (req, res, db) => {
-    if (req.body) {
-        res.json('value exists')
-    } else {
-        res.json('value does not exist')
-    }
-
     const { id } = req.body;
     db('users').where('id', '=', id) // SQL
     .increment('entries', 1)

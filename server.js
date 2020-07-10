@@ -28,13 +28,14 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // dependecy injection
-
 app.get('/', (req, res) => { res.send('It is working!!!') }) 
 app.post('/signin', signin.handleSignin(db, bcrypt)) 
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
 app.get('/profile/:id', (req, res) => { profile. handleProfileGet(req, res, db) })
 app.put('/image', (req, res) => { image.handleImage(req, res, db) })
-app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
+app.post('/imageurl', res.json("It works!!"))
+
+// (req, res) => { image.handleApiCall(req, res) }
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`app is running on ${process.eventNames.PORT}`);
