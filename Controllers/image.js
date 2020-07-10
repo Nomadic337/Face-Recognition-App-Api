@@ -6,14 +6,7 @@ const app = new Clarifai.App({
     apiKey: '52178bdd052b404bacc099f514b720ec'
    });
 
-const handleApiCall = (req, res) => { // no req.body.input generated?
-    const { test } = res;
-    if (test) {
-        res.json("value received!!");
-    } else {
-        res.json("no values");
-    }
-
+const handleApiCall = (req, res) => { 
     app.models
         .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
         .then(data => {
