@@ -7,7 +7,7 @@ const app = new Clarifai.App({
    });
 
 const handleApiCall = (req, res) => { // no req.body.input generated?
-    res.json(console.log("no value"));
+    res.json("no value");
     app.models
         .predict('c0c0ac362b03416da06ab3fa36fb58e3', req.body.input)
         .then(data => {
