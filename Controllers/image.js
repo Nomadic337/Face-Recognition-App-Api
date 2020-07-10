@@ -6,8 +6,8 @@ const app = new Clarifai.App({
     apiKey: '52178bdd052b404bacc099f514b720ec'
    });
 
-const handleApiCall = (req, res) => {
-    res.json(req.body.input);
+const handleApiCall = (req, res) => { // no req.body.input generated?
+    res.json(console.log("no value"));
     app.models
         .predict('c0c0ac362b03416da06ab3fa36fb58e3', req.body.input)
         .then(data => {
