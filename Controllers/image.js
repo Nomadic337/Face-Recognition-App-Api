@@ -21,6 +21,9 @@ const handleApiCall = (req, res) => {
         .catch(err => res.status(400).json('unable to work with API'))
 }
 
+// I can access server and database.
+// 
+
    
 
 const handleImage = (req, res, db) => {
