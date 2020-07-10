@@ -25,6 +25,12 @@ const handleApiCall = (req, res) => {
    
 
 const handleImage = (req, res, db) => {
+    if (req.body) {
+        res.json('value exists')
+    } else {
+        res.json('value does not exist')
+    }
+
     const { id } = req.body;
     db('users').where('id', '=', id) // SQL
     .increment('entries', 1)
